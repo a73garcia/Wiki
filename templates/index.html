@@ -1,0 +1,93 @@
+<h1>Bienvenido a Wiki Local</h1>
+
+<p>
+Wiki Local es una aplicación ligera para crear y consultar documentación
+técnica de forma sencilla.
+</p>
+
+<div class="dashboard">
+
+    <div class="card">
+        <h2>📄 Páginas</h2>
+        <p>{{ total_pages }}</p>
+        <a href="/pages">Ver todas</a>
+    </div>
+
+    <div class="card">
+        <h2>📁 Categorías</h2>
+        <p>{{ total_categories }}</p>
+        <a href="/categories">Abrir</a>
+    </div>
+
+    <div class="card">
+        <h2>⭐ Favoritos</h2>
+        <p>{{ total_favorites }}</p>
+        <a href="/favorites">Consultar</a>
+    </div>
+
+    <div class="card">
+        <h2>🕒 Últimas modificaciones</h2>
+
+        <ul>
+
+        {{ recent_pages }}
+
+        </ul>
+
+    </div>
+
+</div>
+
+<hr>
+
+<h2>Acciones rápidas</h2>
+
+<div class="actions">
+
+    <a class="button" href="/page/new">
+        Nueva página
+    </a>
+
+    <a class="button" href="/search">
+        Buscar
+    </a>
+
+    <a class="button" href="/attachments">
+        Adjuntos
+    </a>
+
+    <a class="button" href="/settings">
+        Configuración
+    </a>
+
+</div>
+
+<hr>
+
+<h2>Actividad reciente</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Fecha</th>
+
+<th>Página</th>
+
+<th>Usuario</th>
+
+<th>Acción</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+{{ activity }}
+
+</tbody>
+
+</table>
