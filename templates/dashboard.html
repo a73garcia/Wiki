@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard - Wiki Local</title>
+<link rel="stylesheet" href="/static/css/style.css">
+<script defer src="/static/js/dashboard.js"></script>
+</head>
+<body>
+
+<header>
+    <h2>Wiki Local</h2>
+</header>
+
+<aside>
+    <nav>
+        <a href="/">Inicio</a>
+        <a href="/dashboard" class="active">Dashboard</a>
+        <a href="/editor">Nueva página</a>
+        <a href="/categories">Categorías</a>
+        <a href="/attachments">Adjuntos</a>
+        <a href="/history">Historial</a>
+        <a href="/settings">Configuración</a>
+    </nav>
+</aside>
+
+<main>
+
+<div class="card">
+    <h1>Dashboard</h1>
+
+    <input id="dashboardSearch"
+           type="text"
+           placeholder="Buscar documentación...">
+</div>
+
+<div class="dashboard-grid">
+
+<div class="stat-card">
+    <div>Páginas</div>
+    <div id="statPages" class="stat-value">0</div>
+</div>
+
+<div class="stat-card">
+    <div>Categorías</div>
+    <div id="statCategories" class="stat-value">0</div>
+</div>
+
+<div class="stat-card">
+    <div>Etiquetas</div>
+    <div id="statTags" class="stat-value">0</div>
+</div>
+
+<div class="stat-card">
+    <div>Indexadas</div>
+    <div id="statIndexed" class="stat-value">0</div>
+</div>
+
+</div>
+
+<div class="card">
+    <h2>Actividad reciente</h2>
+    <div id="recentActivity">
+        Cargando...
+    </div>
+</div>
+
+<div class="card">
+    <h2>Accesos rápidos</h2>
+
+    <button onclick="location.href='/editor'">
+        Nueva página
+    </button>
+
+    <button onclick="location.href='/search'">
+        Buscar
+    </button>
+
+    <button onclick="location.href='/attachments'">
+        Adjuntos
+    </button>
+
+</div>
+
+</main>
+
+</body>
+</html>
