@@ -1,0 +1,92 @@
+<h1>Historial de cambios</h1>
+
+<p>
+Consulta todas las modificaciones realizadas sobre las páginas de la Wiki.
+</p>
+
+<div class="toolbar">
+
+<form action="/history" method="get">
+
+<input
+    type="text"
+    name="page"
+    placeholder="Filtrar por página">
+
+<select name="action">
+
+<option value="">Todas las acciones</option>
+<option>Creación</option>
+<option>Edición</option>
+<option>Eliminación</option>
+<option>Restauración</option>
+
+</select>
+
+<button type="submit">
+Filtrar
+</button>
+
+</form>
+
+</div>
+
+<hr>
+
+<table class="history-table">
+
+<thead>
+
+<tr>
+
+<th>Fecha</th>
+<th>Página</th>
+<th>Usuario</th>
+<th>Acción</th>
+<th>Comentario</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+{{ history }}
+
+<!-- Ejemplo
+
+<tr>
+
+<td>2026-07-18 09:15</td>
+
+<td>
+<a href="/page/splunk">Splunk</a>
+</td>
+
+<td>Administrador</td>
+
+<td>Edición</td>
+
+<td>Actualización consulta SPL</td>
+
+</tr>
+
+-->
+
+</tbody>
+
+</table>
+
+<hr>
+
+<div class="history-actions">
+
+<a class="button" href="/history/export">
+📄 Exportar historial
+</a>
+
+<a class="button" href="/history/restore">
+⏪ Restaurar versión
+</a>
+
+</div>
