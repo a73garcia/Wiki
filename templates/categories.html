@@ -1,0 +1,73 @@
+<h1>Categorías</h1>
+
+<p>
+Organiza toda la documentación técnica mediante categorías.
+</p>
+
+<div class="category-toolbar">
+
+<a class="button" href="/category/new">
+➕ Nueva categoría
+</a>
+
+<input
+    type="text"
+    id="categoryFilter"
+    placeholder="Filtrar categorías...">
+
+</div>
+
+<hr>
+
+<div class="category-grid">
+
+{{ categories }}
+
+<!-- Ejemplo
+
+<div class="category-card">
+
+<h2>
+<a href="/category/splunk">
+Splunk
+</a>
+</h2>
+
+<p>
+Consultas SPL, Dashboards, Lookups...
+</p>
+
+<div class="category-info">
+
+<span>35 páginas</span>
+
+</div>
+
+</div>
+
+-->
+
+</div>
+
+<hr>
+
+<h2>Estadísticas</h2>
+
+<table>
+
+<tr>
+<th>Total categorías</th>
+<td>{{ total_categories }}</td>
+</tr>
+
+<tr>
+<th>Total páginas</th>
+<td>{{ total_pages }}</td>
+</tr>
+
+<tr>
+<th>Categoría más utilizada</th>
+<td>{{ biggest_category }}</td>
+</tr>
+
+</table>
