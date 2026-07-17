@@ -1,0 +1,103 @@
+<h1>Configuración</h1>
+
+<p>
+Personaliza el funcionamiento de Wiki Local.
+</p>
+
+<form action="/settings/save" method="post">
+
+<h2>General</h2>
+
+<label>Nombre del sitio</label>
+<input type="text" name="site_title" value="{{ site_title }}">
+
+<label>Página inicial</label>
+<input type="text" name="default_page" value="{{ default_page }}">
+
+<label>Idioma</label>
+<select name="language">
+<option value="es">Español</option>
+<option value="en">English</option>
+</select>
+
+<hr>
+
+<h2>Apariencia</h2>
+
+<label>Tema</label>
+<select name="theme">
+<option value="light">☀ Claro</option>
+<option value="dark">🌙 Oscuro</option>
+</select>
+
+<label>
+<input type="checkbox" name="compact_mode">
+Modo compacto
+</label>
+
+<hr>
+
+<h2>Editor</h2>
+
+<label>
+<input type="checkbox" checked name="autosave">
+Autoguardado
+</label>
+
+<label>
+<input type="checkbox" checked name="preview">
+Vista previa en tiempo real
+</label>
+
+<label>
+<input type="checkbox" checked name="syntax">
+Resaltado de sintaxis
+</label>
+
+<hr>
+
+<h2>Adjuntos</h2>
+
+<label>Carpeta de adjuntos</label>
+
+<input
+type="text"
+name="attachments_path"
+value="{{ attachments_path }}">
+
+<label>Tamaño máximo (MB)</label>
+
+<input
+type="number"
+name="max_upload"
+value="100">
+
+<hr>
+
+<h2>Copias de seguridad</h2>
+
+<label>
+<input type="checkbox" checked name="backup">
+Copias automáticas
+</label>
+
+<label>Días de conservación</label>
+
+<input
+type="number"
+name="backup_days"
+value="30">
+
+<hr>
+
+<h2>Botones</h2>
+
+<button class="button" type="submit">
+💾 Guardar configuración
+</button>
+
+<a class="button" href="/">
+Cancelar
+</a>
+
+</form>
