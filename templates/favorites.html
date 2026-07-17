@@ -1,0 +1,85 @@
+<h1>Favoritos</h1>
+
+<p>
+Accede rápidamente a la documentación que consultas con mayor frecuencia.
+</p>
+
+<div class="toolbar">
+
+<input
+    type="text"
+    id="favoriteFilter"
+    placeholder="Buscar favorito...">
+
+<a class="button" href="/favorites/manage">
+⚙ Administrar favoritos
+</a>
+
+</div>
+
+<hr>
+
+<div class="favorites-grid">
+
+{{ favorites }}
+
+<!-- Ejemplo
+
+<div class="favorite-card">
+
+<h2>
+<a href="/page/proofpoint">
+Proofpoint
+</a>
+</h2>
+
+<p>
+Administración de políticas, filtros y cuarentenas.
+</p>
+
+<div class="favorite-meta">
+
+<span>📁 Email Security</span><br>
+<span>🕒 Actualizado: 2026-07-18</span>
+
+</div>
+
+<div class="favorite-actions">
+
+<a href="/page/proofpoint">Abrir</a> |
+<a href="/favorite/remove/proofpoint">Quitar</a>
+
+</div>
+
+</div>
+
+-->
+
+</div>
+
+<hr>
+
+<h2>Accesos rápidos</h2>
+
+<div class="quick-links">
+
+<a class="button" href="/page/new">➕ Nueva página</a>
+
+<a class="button" href="/search">🔍 Buscar</a>
+
+<a class="button" href="/history">🕒 Historial</a>
+
+<a class="button" href="/attachments">📎 Adjuntos</a>
+
+<a class="button" href="/categories">📂 Categorías</a>
+
+</div>
+
+<hr>
+
+<div class="info">
+
+Los favoritos permiten mantener siempre accesible la documentación más utilizada,
+como procedimientos, consultas SPL, scripts de PowerShell, SQL o Python.
+
+</div>
